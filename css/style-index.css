@@ -1,0 +1,316 @@
+/* General Reset */
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #44010c, #ee0047);
+    color: white;
+    padding: 1em 2em;
+}
+
+.logo-container img {
+height: 10em;
+}
+
+.titulo-cabecera img {
+height: 20em;
+padding-left: 5em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    padding-right: 5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Estilos generales para la sección 'Sobre nosotros' */
+.about-us {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fafafa;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+    transition: all 0.3s ease;
+}
+
+.about-us:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el ratón */
+}
+
+.text-container {
+    width: 55%;
+    padding-right: 30px;
+}
+
+.text-container h2 {
+    font-size: 36px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: justify;
+    hyphens: auto; /* Permite la división automática de palabras */
+}
+
+
+.image-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 30rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Efecto de zoom suave al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Efecto de sombra más fuerte */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
+
+/* ULTIMO PODCAST */
+.ultimopodcast {
+    background-color: #f0f0f0;
+    padding: 3em 10%; /* Más espacio alrededor del contenido */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ultimopodcast h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #333;
+}
+
+.episode1 {
+    background-color: #ffffff;
+    padding: 10em 15em; /* Espacio amplio dentro del artículo */
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.episode1 img {
+    width: 300px;
+    margin-bottom: 1em;
+}
+
+.content h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.content p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.listen-btn {
+    background-color: #44010c;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: #FFD700;
+}
+
+
+/* Podcasts Section */
+.hemeroteca {
+    background-color: #f0f0f0;
+    padding: 4em 2em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    align-items: center;
+}
+
+.hemeroteca h2{
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    padding-bottom: 1em;
+
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.episode {
+    background: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.episode img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.episode .content {
+    padding: 1em;
+}
+
+.episode h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.episode p {
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.listen-btn {
+    background-color: #44010c;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+    align-items: center;
+}
+
+.listen-btn:hover {
+    background-color: #44010c;
+}
+
+.rating {
+    margin-top: 1em;
+    color: #ffae00;
+    font-size: 1.2em;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(90deg, #44010c, #ee0047);
+    color: #fff;
+    padding: 30px 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .social-media {
+    margin-bottom: 20px;
+}
+
+footer .social-media a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media a:hover {
+    transform: scale(1.1);
+}
+
+footer .social-media img {
+    width: 2rem ;
+    height: 2rem;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
